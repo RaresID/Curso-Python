@@ -69,25 +69,7 @@ print("BUCLES WHILE")
 print("=" * 20)
 print("\n")
 
-"""
 
-Bucle while
-
-Bucle indeterminado, porque se ejecuta en base a condiciones por lo que 
-a priori podemos no saber cuántas veces se va a ejecutar.
-
-Ideal para crear aplicaciones de consola (CLI apps)
-
-No tiene do while como en Java, se podría emular con while True (bucle infinito)
-
-Puede haber más de una condición en el while pero dificulta la lectura
-"""
-contador = -2
-
-while contador < 10:
-    print(contador)
-    contador += 1
-    
     
 """
 Explorar la keyword "continue" permite saltar a la siguiente iteración
@@ -144,23 +126,5 @@ print("Fuera del bucle")
 
 
 
-"""
 
-Iterar una estructura de datos, por ejemplo una lista []
-
-Itera la lista mientras la lista no esté vacía
-
-La función pop() viene de las listas, y elimina y devuelve un elemento de la lista.
-
-.pop(0) elimina el primero
-.pop() elimina el último
-"""
-
-nombres = ["Kary", "Jorge", "Marcos"]
-
-while nombres:
-    nombre = nombres.pop(1)
-    # if len(nombres) == 0:
-    #     print("Ya no quedan mas nombres, este es el último:")
-    print(nombre)
     

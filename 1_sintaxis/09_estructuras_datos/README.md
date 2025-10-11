@@ -1,0 +1,4 @@
+* listas: []
+* tuplas: ()
+* diccionarios: {}
+* conjuntos: {}
