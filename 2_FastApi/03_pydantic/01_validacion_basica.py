@@ -4,14 +4,29 @@ from typing import Optional
 
 app = FastAPI()
 
+# modelo básico
 class Usuario(BaseModel):
     nombre: str
     edad: int
     activo: bool
-    
+
 # modelo con campos opcionales y valores por defecto
 class Producto(BaseModel):
     nombre: str
     precio: float
-    descipcion: Optional[str] = None
+    descripcion: Optional[str] = None
     disponible: bool = True
+
+@app.post("/usuarios")
+def crear_usuario(usuario: Usuario):
+    return {
+        "mensaje": f"Usuario {usuario.nombre} creado correctamente"
+    }
+
+@app.post("/productos")
+def crear_producto(producto: Producto):
+    return {
+        "producto_creado": producto.nombre,
+        "precio": producto.precio,
+        "disponible": producto.disponible
+    }
